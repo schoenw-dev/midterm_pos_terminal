@@ -8,8 +8,6 @@ displayandpick --  menuSelection
 /////chooseToppings
 
 
-
-
 Frosters* - blizzard eq
 //////ingredients (list or array)
 //////size
@@ -33,8 +31,6 @@ Bowl
 
 
 
-
-
 Shakes/Malts
 //////bool malt
 //////flavor
@@ -49,12 +45,10 @@ Sundays
 
 
 
-
 Specialty Sundays
 //////Banna Split
 //////Bunch-o-Brownie
 //////S'More Please
-
 
 
 
@@ -75,7 +69,6 @@ Hot Food
 	dipping
 /////// 75 cents a peice
 /////// 5$ for a bottle
-
 
 
 
