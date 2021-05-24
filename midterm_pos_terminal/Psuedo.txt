@@ -109,4 +109,4 @@ REQUIREMENTS:
 10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
 	- MAIN METHOD(?)
 11. Return to the original menu for a new order. (Hint: you’ll want an array or List to keep track of what’s been ordered!)
-12 .Optional enhancements: (Moderate) Include an option to add to the product list, which then outputs to the product file.
+12. Optional enhancements: (Moderate) Include an option to add to the product list, which then outputs to the product file.
