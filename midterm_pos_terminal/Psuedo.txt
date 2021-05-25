@@ -2,6 +2,12 @@ IDEAS (not necessary to complete project, just nice to have):
 1. have a "one of everything" option that shows we do have 12 items
 2. have second window produce additional toppings so that console doesn't get flooded(?)
 	- auto close when requested items selected
+3. QA (Quality Assurance)! - How could it break, where are holes, and how to patch/prevent?
+4. Customer (class) account details: rewards, loyalty, 
+5. Confirm double price is to hundredth place (= $X.xx)
+6. @2130, solve merge conflicts
+7. multiple txt files for items/properties?
+	- flavors, price
 
 ***Requirements along bottom of document***
 
@@ -89,9 +95,12 @@ Coupons
 
 
 REQUIREMENTS:
-1. Your solution must include some kind of a product class with a name, category, description, and price for each item.
+DONE! - 1. Your solution must include some kind of a product class with a name, category, description, and price for each item.
 2. 12 items minimum; they must be stored in a text file your program reads in. 
 	- Example: 3 categories, 4 items/category - teammate gets 1 category
+		- Will: hot food
+		- Anthony: bowl (build-a-bowl)
+		- Andrijka: soft-serve
 3. Present a menu to the user and let them choose an item (by number or letter).
 	- Example: depending on item selected, could correspond to meal/coupon
 		- if (a && b), then subtotal = subtotal + X.xx
