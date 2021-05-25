@@ -111,11 +111,11 @@ DONE! - 1. Your solution must include some kind of a product class with a name, 
 7. Give the subtotal, sales tax, and grand total.
 8. Use an Abstract Class or an Interface for the various payment methods. 
 	- Include a separate class for each payment method that inherits from that parent class.
-9. Ask for the payment type--cash, credit, or check.
+ANDRIJKA? - 9. Ask for the payment type--cash, credit, or check. - Andrijka?
 	a. For cash, ask the amount tendered and provide change.
 	b. For check, get the check number.
 	c. For credit, get the credit card  number, expiration, and CVV.
 10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
-	- MAIN METHOD(?)
-11. Return to the original menu for a new order. (Hint: you’ll want an array or List to keep track of what’s been ordered!)
+	- Main method(?)
+ANTHONY? - 11. Return to the original menu for a new order. (Hint: you’ll want an array or List to keep track of what’s been ordered!) - Anthony?
 12. Optional enhancements: (Moderate) Include an option to add to the product list, which then outputs to the product file.

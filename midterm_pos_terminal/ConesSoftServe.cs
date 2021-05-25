@@ -12,12 +12,13 @@ namespace midterm_pos_terminal
         {
             Name = name;
             Price = price;
-            CategorySize = size;
+            CategorySize = size; //add size - feature #3
             Subtotal = subtotal;
-            Dipped = dipped;
+            Dipped = dipped; //item feature #2
+            //add cone type - feature #4
         }
 
-        public static List<string> ChooseCreamFlavor()
+        public static List<string> ChooseCreamFlavor() //feature #1; method to actually choose flavor, not just list out
         {
             List<string> flavors = new List<string>
             {
