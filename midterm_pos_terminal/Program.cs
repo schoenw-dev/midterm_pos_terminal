@@ -8,6 +8,7 @@ namespace midterm_pos_terminal
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("GEEEEEEET YOUR PIIIIICKLEEEEEE !!!!"); //Andrijka's contribution
+            
         }
     }
 }
