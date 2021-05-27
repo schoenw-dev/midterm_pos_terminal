@@ -12,5 +12,25 @@ namespace midterm_pos_terminal
         public string Topping { get; set; }
         public string Description { get; set; }
         public double Subtotal { get; set; }
+
+        public ItemProperties()
+        {
+
+        }
+
+        public ItemProperties(string itName, double itPrice, string itCategorySize, string itTopping, string itDescription, double itSubtotal)
+        {
+            Name = itName;
+            Price = itPrice;
+            CategorySize = itCategorySize;
+            Topping = itTopping;
+            Description = itDescription;
+            Subtotal = itSubtotal;
+        }
+          
+
+          
+
     }
+
 }
