@@ -8,12 +8,17 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\kotok\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\Anthony Blocton\\.nuget\\packages\\": {}
+>>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\GCProjects\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
       "projectName": "midterm_pos_terminal",
       "projectPath": "D:\\GCProjects\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
@@ -25,6 +30,16 @@
       ],
       "configFilePaths": [
         "C:\\Users\\kotok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
+      "projectName": "midterm_pos_terminal",
+      "projectPath": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
+      "packagesPath": "C:\\Users\\Anthony Blocton\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Anthony Blocton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +79,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+>>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
       }
     }
   }
