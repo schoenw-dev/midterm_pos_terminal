@@ -8,6 +8,7 @@ IDEAS (not necessary to complete project, just nice to have):
 6. @2130, solve merge conflicts
 7. multiple txt files for items/properties?
 	- flavors, price
+8. use case for menu selection to use different menu txt file
 
 ***Requirements along bottom of document***
 

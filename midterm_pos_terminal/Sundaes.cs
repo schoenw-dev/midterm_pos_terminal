@@ -4,16 +4,16 @@ using System.Text;
 
 namespace midterm_pos_terminal
 {
-    public class Sundays : ItemProperties
+    public class Sundaes : ItemProperties
     {
         public string Flavor;
 
-        public Sundays()
+        public Sundaes()
         {
 
         }
 
-        public Sundays(string _name, string _flavor, string _toppings, double _price)
+        public Sundaes(string _name, string _flavor, string _toppings, double _price)
         {
             Name = _name;
             Flavor = _flavor;

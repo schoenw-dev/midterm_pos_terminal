@@ -1,0 +1,6 @@
+SoftServe Menu
+
+1. Size
+2. Cone Type
+3. Dipped
+4. Flavor

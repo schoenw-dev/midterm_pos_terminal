@@ -71,7 +71,6 @@ namespace midterm_pos_terminal
             else
             {
                 dipped = false;
-                price = price + 1.50; //why price vs subtotal?
             }
         }
 
@@ -82,7 +81,7 @@ namespace midterm_pos_terminal
                 "vanilla", "chocolate", "strawberry", "mint chocolate chip"
             };
 
-            //Subtotal = Subtotal + ? ?
+            Subtotal = Subtotal + 2;
             return flavors;
         }
     }

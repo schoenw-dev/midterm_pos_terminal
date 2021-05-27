@@ -7,7 +7,6 @@ using System.Text;
 namespace midterm_pos_terminal
 {
     class MenuFilesIO
-
     {
         public class MenuTextFile
         {
@@ -19,8 +18,8 @@ namespace midterm_pos_terminal
                 {
                     writer.WriteLine($"{itemProperties1.Name}, {itemProperties1.Price},{itemProperties1.CategorySize},{itemProperties1.Topping},{itemProperties1.Topping},{itemProperties1.Subtotal}");
                 }
-
             }
+
             public static List<ItemProperties> GetMenu(string path)
             {
                 List<ItemProperties> itemProperties = new List<ItemProperties>();
@@ -35,15 +34,7 @@ namespace midterm_pos_terminal
 
                 reader.Close();
                 return itemProperties;
-
-
-
-
             }
-
-
-
         }
-
-        }
+    }
 }
