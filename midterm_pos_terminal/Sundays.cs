@@ -6,7 +6,6 @@ namespace midterm_pos_terminal
 {
     public class Sundays : ItemProperties
     {
-
         public string Flavor;
 
         public Sundays()
@@ -20,7 +19,6 @@ namespace midterm_pos_terminal
             Flavor = _flavor;
             Topping = _toppings;
             Price = _price;
-
         }
     }
 }

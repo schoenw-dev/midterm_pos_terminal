@@ -6,7 +6,7 @@ namespace midterm_pos_terminal
 {
     public class Basket : ItemProperties
     {
-        public double total;
+        //public double total; - removing as Subtotal from ItemProperties can  be used
         public Basket()
         {
 
@@ -15,7 +15,7 @@ namespace midterm_pos_terminal
         public Basket(Sides _side, HotMain _hotMain)
         {
             Name = $"{_hotMain.Name} with {_side.Name}";
-            total = _hotMain.Price + 2.5;
+            Subtotal = _hotMain.Price + 2.5; //changed total to Subtotal
         }
     }
 }

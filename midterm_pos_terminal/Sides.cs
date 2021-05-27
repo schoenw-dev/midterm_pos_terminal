@@ -6,7 +6,6 @@ namespace midterm_pos_terminal
 {
     public class Sides : ItemProperties
     {
-
         public Sides()
         {
 
@@ -16,10 +15,9 @@ namespace midterm_pos_terminal
         {
             Name = _name;
             Price = _price;
-
         }
 
-        
+
 
     }
 }
