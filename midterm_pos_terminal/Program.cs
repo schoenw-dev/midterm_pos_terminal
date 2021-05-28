@@ -6,8 +6,10 @@ namespace midterm_pos_terminal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            
+            int exam = MenuApp.DisplayRootMenu();
+            Console.WriteLine(exam);
         }
+
+
     }
 }
