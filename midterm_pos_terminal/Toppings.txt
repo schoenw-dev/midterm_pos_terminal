@@ -1,0 +1,10 @@
+﻿Brownie Bites | 0.75
+Cheesecake Bites | 0.75
+Chocolate Chip Cookie Dough | 0.60
+Gummy Worms | 0.50
+Kit Kats | 0.60
+M&M's | 0.25
+Oreo Crumbles | 0.25
+Reece's PeanutButter Cups | 0.60
+Reece's Pieces | 0.40
+Sprinkles | 0.25
