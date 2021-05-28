@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "6hwcuqKlSm8G6qXy4J6LSIxF9jIPuAeMf5DBYbGpbOmM/s7KOq66gyK5CH75KFsDaHCjujd9OdEZ399KZUKTbQ==",
   "success": true,
   "projectFilePath": "D:\\GCProjects\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-=======
-  "dgSpecHash": "jrQByocgv/phluiq4yW18ezK6DP5XMNuAJuoOFqOq7Ps0E58d8vno4MZWAjK4ONAzPrsa7Tt1nDEzt6lwOLMlw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
->>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\GCProjects\\midterm_pos_terminal\\midterm_pos_terminal\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

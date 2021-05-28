@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\GCProjects\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj": {}
   },
   "projects": {
@@ -19,22 +18,6 @@
         ],
         "configFilePaths": [
           "C:\\Users\\kotok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-        "projectName": "midterm_pos_terminal",
-        "projectPath": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-        "packagesPath": "C:\\Users\\Anthony Blocton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anthony Blocton\\Desktop\\midterm_pos_terminal\\midterm_pos_terminal\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Anthony Blocton\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,11 +57,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> 4c94cd29cb549b88d2e7969aee183fac9caa62d6
         }
       }
     }
