@@ -1,0 +1,13 @@
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.exe
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.deps.json
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.runtimeconfig.json
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.runtimeconfig.dev.json
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.dll
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\bin\Debug\netcoreapp3.1\CashRegApp.pdb
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.csprojAssemblyReference.cache
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.AssemblyInfoInputs.cache
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.AssemblyInfo.cs
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.csproj.CoreCompileInputs.cache
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.dll
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.pdb
+C:\Users\Anthony Blocton\source\repos\CashRegApp\CashRegApp\obj\Debug\netcoreapp3.1\CashRegApp.genruntimeconfig.cache
