@@ -1,0 +1,4 @@
+Hamburger|2.99|Test Item 1
+Hot Dog|1.99|Test Item 2
+Nachos|2.49|Test Item 3
+Wings|3.39|Test Item 4
