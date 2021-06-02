@@ -19,7 +19,7 @@ namespace midterm_pos_terminal
             Console.WriteLine("Please select from the following options: \nEnter the number related to your desired item.");
 
             bool repeat = true;
-            int userSelection = 0;
+            int userSelection = 0; 
             while (repeat)
             {
 
@@ -51,6 +51,10 @@ namespace midterm_pos_terminal
 
             return userSelection;
         }
+
+
+
+
 
 
     }

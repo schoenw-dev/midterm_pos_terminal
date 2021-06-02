@@ -6,6 +6,7 @@ namespace midterm_pos_terminal
     {
         static void Main(string[] args)
         {
+            List<ItemProperties> RunningTotal = new List<ItemProperties>();
             int exam = MenuApp.DisplayRootMenu();
             Console.WriteLine(exam);
         }

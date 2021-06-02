@@ -20,9 +20,9 @@ namespace midterm_pos_terminal
             Dipped = dipped; // feature #3
             SoftServeFlavor = softServeFlavor; //feature #4 - other 'list' of flavors to reference?
 
-           // Name = $"{_hotMain.Name} with {_side.Name}";
-            //Subtotal = Subtotal + sizes.Price + cones.Price + dipped.Price + flavors.Price;
-           // ConeType.ReferenceEquals(Console.ReadLine(), ConeType.sugar);
+            Name = $"{_hotMain.Name} with {_side.Name}";
+            Subtotal = Subtotal + sizes.Price + cones.Price + dipped.Price + flavors.Price;
+            ConeType.ReferenceEquals(Console.ReadLine(), ConeType.sugar);
         }
 
         //public static List<string> ChooseSize() //feature #1; method to actually choose size, not just list out
@@ -66,11 +66,11 @@ namespace midterm_pos_terminal
             if (Console.ReadLine().ToUpper() == "Y")
             {
                 Dipped = true;
-                //subtotal = subtotal + 0.50;
+                subtotal = subtotal + 0.50;
             }
             else
             {
-               // dipped = false;
+                dipped = false;
             }
         }
 
@@ -81,7 +81,7 @@ namespace midterm_pos_terminal
                 "vanilla", "chocolate", "strawberry", "mint chocolate chip"
             };
 
-           // Subtotal = Subtotal + 2;
+            Subtotal = Subtotal + 2;
             return flavors;
         }
     }
