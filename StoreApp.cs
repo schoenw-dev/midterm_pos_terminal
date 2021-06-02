@@ -6,106 +6,131 @@ using System.Linq;
 namespace CashRegApp
 {
     public class StoreApp
-    {   //MyList.Select(x=>.Name).ToArray();
+    {   
         public static void UserItemMenu()
         {
-            //while loop{}
+            
+            List<Items> userorder = new List<Items>();
+            double total = 0;
+            double final_total;
+            double change;
+
             while (true)
             {
 
-                double total = 0;
-                var localList = ItemTextFile.ReadItems("../../../ItemMenu");
+                
+                var localMenu = ItemTextFile.ReadItems("../../../ItemMenu");
 
                 Console.WriteLine("Please place your order");
-                //out put list
-                foreach (Items items in localList)
+                
+                foreach (Items items in localMenu)
                 {
-                    //can use a loop to number the items?
+                    
                     Console.WriteLine($"{items.ItemName},{items.ItemPrice},{items.ItemDescription}");
                 }
 
                 var userchoice = Console.ReadLine().ToLower();
 
-                //make a list that will be filled with items that the user had ordered
-                List<Items> userorder = new List<Items>();
+                
 
 
                 switch (userchoice)
                 {
-                    case "hamburger":
+                    case "1":
                         //orders item in location 1
                         //will be expanded to give user custom options
-                        userorder.Add(new Items { ItemName = "Hamburger", ItemPrice = 2.99, ItemDescription = "Test Hamburger" });
-
-                        ItemTextFile.WriteItems(userorder);
-                        foreach (Items items1 in userorder)
-                        {
-                            total += items1.ItemPrice;
-                        }
-                      /*  Console.WriteLine("Will that be all?");
-                        if (userdone == "yes")
-                        {
-                            break;
-                        } */
+                     userorder.Add(new Items { ItemName = "Hamburger", ItemPrice = 2.99, ItemDescription = "Test Hamburger" });
+                    
                         break;
 
-                    case "hot dog":
+                    case "2":
                         //orders item in location 2
                         userorder.Add(new Items { ItemName = "Hot Dog", ItemPrice = 1.99, ItemDescription = "Test Hot Dog" });
-                        ItemTextFile.WriteItems(userorder);
-                        foreach (Items items1 in userorder)
-                        {
-                            total += items1.ItemPrice;
-                        }
-                      /*  Console.WriteLine("Will that be all?");
-                        if (userdone == "yes")
-                        {
-                            break;
-                        } */
+                      
                         break;
 
-                    case "nachos":
+                    case "3":
                         //orders item in location 3
                         userorder.Add(new Items { ItemName = "Nachos", ItemPrice = 1.99, ItemDescription = "Test Nachos" });
-                        ItemTextFile.WriteItems(userorder);
-                        foreach (Items items1 in userorder)
-                        {
-                            total += items1.ItemPrice;
-                        }
-                      /*  Console.WriteLine("Will that be all?");
-                        if (userdone == "yes")
-                        {
-                            break;
-                        } */
+                    
                         break;
 
                     default:
                         Console.WriteLine("Please select an item from our menu");
-                        break;
+                        continue;
 
 
                 }
+
 
                 Console.WriteLine("Will that be all? Y/N");
                 string userdone = Console.ReadLine().ToLower();
 
-                if (userdone == "y")
+
+
+                if (userdone != "n")
                 {
 
-                    foreach (Items items2 in userorder)
+                 ItemTextFile.WriteItems(userorder);
+                 var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt"); //could use this to create a record of user purchases
+                 Console.WriteLine("YOUR FINAL ORDER IS");
+                 
+
+                
+                 foreach(Items item1 in userorder)
                     {
-                        Console.WriteLine($"Your order is: {items2.ItemName},{items2.ItemPrice},{items2.ItemDescription}");
-                        Console.WriteLine($"Balance due = {total}");
-                        break;
+
+                        Console.WriteLine($"{item1.ItemName},{item1.ItemPrice},{item1.ItemDescription}");
+                        total += item1.ItemPrice;
 
                     }
+
+                    final_total = total;
+                    Console.WriteLine($"Your total is {final_total}");
+                    double outstandingbalance;
+                   // double runningbalance;
+
+
+                    while (true)
+                   {
+                        Console.WriteLine("Please complete payment: ");
+                        string usermoney = Console.ReadLine();
+                        double userpay = double.Parse(usermoney);
+
+                        if (final_total > userpay) //abstract into method
+                        {
+                            outstandingbalance = (final_total - userpay);
+                            Console.WriteLine($"{outstandingbalance} is you balance");
+                            final_total = outstandingbalance;
+                            
+                           
+
+                        }
+                        else if (userpay >= final_total)
+                        {
+                            change = (userpay - final_total);
+                            Console.WriteLine($"{change} is your change");
+                            Console.WriteLine("enjoy your meal");
+                            break;
+                        }
+                   }
+
+
+
+
+
+                    break;
+                  
                 }
+               
                 else
-                    continue;
+                    continue; 
+
 
 
             }
-            //Does that complete your order? If yes, break loop
+            
+            
             
 
             
