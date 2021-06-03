@@ -10,9 +10,6 @@ IDEAS (not necessary to complete project, just nice to have):
 	- flavors, price
 8. use case for menu selection to use different menu txt file
 
-***Requirements along bottom of document***
-
-
 
 Ice Cream Shop - Frosty Freeze
 
@@ -30,7 +27,6 @@ Frosters* - blizzard eq
 	public Froster(string flavor, string[] toppings)
 
 
-
 Cones
 /////cone type
 /////dipped
@@ -39,12 +35,10 @@ Cones
 	public (string flavor, string[] toppings)
 
 
-
 Bowl
 /////flavor
 /////toppings
 /////size
-
 
 
 Shakes/Malts
@@ -53,20 +47,16 @@ Shakes/Malts
 //////size
 
 
-
 Sundays
 /////ice cream flavor (array or list)
 /////toppings
 /////size
 
 
-
 Specialty Sundays
 //////Banna Split
 //////Bunch-o-Brownie
 //////S'More Please
-
-
 
 
 Hot Food
@@ -87,36 +77,7 @@ Hot Food
 /////// 5$ for a bottle
 
 
-
 Coupons
 ////////punch card
 ////////if order effectively equal to a basket{apply basket price}
 ////////basket + shake {lower than unit price}
-////////
-
-
-REQUIREMENTS:
-DONE! - 1. Your solution must include some kind of a product class with a name, category, description, and price for each item.
-2. 12 items minimum; they must be stored in a text file your program reads in. 
-	- Example: 3 categories, 4 items/category - teammate gets 1 category
-		- Will: hot food
-		- Anthony: bowl (build-a-bowl)
-		- Andrijka: soft-serve
-3. Present a menu to the user and let them choose an item (by number or letter).
-	- Example: depending on item selected, could correspond to meal/coupon
-		- if (a && b), then subtotal = subtotal + X.xx
-4. Allow the user to choose a quantity for the item ordered.
-	- Example: Method for conducting multiples, then call method when CR != "N"
-5. Give the user a line total (item price * quantity).
-6. Either through a menu or a separate question, allow them to re-display the menu and to complete the purchase.
-7. Give the subtotal, sales tax, and grand total.
-8. Use an Abstract Class or an Interface for the various payment methods. 
-	- Include a separate class for each payment method that inherits from that parent class.
-ANDRIJKA? - 9. Ask for the payment type--cash, credit, or check. - Andrijka?
-	a. For cash, ask the amount tendered and provide change.
-	b. For check, get the check number.
-	c. For credit, get the credit card  number, expiration, and CVV.
-10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
-	- Main method(?)
-ANTHONY? - 11. Return to the original menu for a new order. (Hint: you’ll want an array or List to keep track of what’s been ordered!) - Anthony?
-12. Optional enhancements: (Moderate) Include an option to add to the product list, which then outputs to the product file.

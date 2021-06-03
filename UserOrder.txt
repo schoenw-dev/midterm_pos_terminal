@@ -1,4 +1,1 @@
-Hamburger,2.99,Test Hamburger
-Hot Dog,1.99,Test Hot Dog
-Nachos,1.99,Test Nachos
-Nachos,1.99,Test Nachos
+
