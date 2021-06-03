@@ -7,9 +7,9 @@ namespace CashRegApp
 {
     public class ItemTextFile
     {
-        public static List<Items> ReadItems(string path)
+        public static List<ItemProperties> ReadItems(string path)
         {
-            List<Items> items = new List<Items>();
+            List<ItemProperties> items = new List<ItemProperties>();
             StreamReader reader = new StreamReader("../../../ItemMenu.txt");
             string line = reader.ReadLine();
             while (line != null)
@@ -24,10 +24,10 @@ namespace CashRegApp
         //"../../../UserOrder"
         //"../../../ItemMenu.txt"
         //use the writer to give managers a method to add items to the menu?
-        public static void WriteItems(List<Items> items)
+        public static void WriteItems(List<ItemProperties> items)
         {
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
-            foreach (Items item in items)
+            foreach (ItemProperties item in items)
             {
                 writer.WriteLine($"{item.ItemName},{item.ItemPrice},{item.ItemDescription}");
             }

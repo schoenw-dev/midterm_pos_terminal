@@ -9,7 +9,7 @@ namespace CashRegApp
     {
         public static void UserItemMenu()
         {
-            List<Items> userorder = new List<Items>();
+            List<ItemProperties> userorder = new List<ItemProperties>();
             double total = 0;
             double final_total;
             double change;
@@ -20,7 +20,7 @@ namespace CashRegApp
 
                 Console.WriteLine("Please place your order");
 
-                foreach (Items items in localMenu)
+                foreach (ItemProperties items in localMenu)
                 {
                     Console.WriteLine($"{items.ItemName},{items.ItemPrice},{items.ItemDescription}");
                 }
@@ -32,19 +32,19 @@ namespace CashRegApp
                     case "1":
                         //orders item in location 1
                         //will be expanded to give user custom options
-                        userorder.Add(new Items { ItemName = "Hamburger", ItemPrice = 2.99, ItemDescription = "Test Hamburger" });
+                        userorder.Add(new ItemProperties { ItemName = "Hamburger", ItemPrice = 2.99, ItemDescription = "Test Hamburger" });
 
                         break;
 
                     case "2":
                         //orders item in location 2
-                        userorder.Add(new Items { ItemName = "Hot Dog", ItemPrice = 1.99, ItemDescription = "Test Hot Dog" });
+                        userorder.Add(new ItemProperties { ItemName = "Hot Dog", ItemPrice = 1.99, ItemDescription = "Test Hot Dog" });
 
                         break;
 
                     case "3":
                         //orders item in location 3
-                        userorder.Add(new Items { ItemName = "Nachos", ItemPrice = 1.99, ItemDescription = "Test Nachos" });
+                        userorder.Add(new ItemProperties { ItemName = "Nachos", ItemPrice = 1.99, ItemDescription = "Test Nachos" });
 
                         break;
 
@@ -62,7 +62,7 @@ namespace CashRegApp
                     var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt"); //could use this to create a record of user purchases
                     Console.WriteLine("YOUR FINAL ORDER IS");
 
-                    foreach (Items item1 in userorder)
+                    foreach (ItemProperties item1 in userorder)
                     {
                         Console.WriteLine($"{item1.ItemName},{item1.ItemPrice},{item1.ItemDescription}");
                         total += item1.ItemPrice;
