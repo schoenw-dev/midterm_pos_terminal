@@ -8,17 +8,12 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\schoenw\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
-=======
-    "C:\\Users\\Anthony Blocton\\.nuget\\packages\\": {}
->>>>>>> 390ef2528624e763b3d952368640e48cba86b8ff
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\schoenw\\Documents\\grand_circus\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
       "projectName": "midterm_pos_terminal",
       "projectPath": "C:\\Users\\schoenw\\Documents\\grand_circus\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
@@ -32,17 +27,6 @@
         "C:\\Users\\schoenw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-=======
-      "projectUniqueName": "C:\\Users\\Anthony Blocton\\Desktop\\MidTermMVP\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-      "projectName": "midterm_pos_terminal",
-      "projectPath": "C:\\Users\\Anthony Blocton\\Desktop\\MidTermMVP\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-      "packagesPath": "C:\\Users\\Anthony Blocton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anthony Blocton\\Desktop\\MidTermMVP\\midterm_pos_terminal\\midterm_pos_terminal\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Anthony Blocton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 390ef2528624e763b3d952368640e48cba86b8ff
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -81,11 +65,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> 390ef2528624e763b3d952368640e48cba86b8ff
       }
     }
   },

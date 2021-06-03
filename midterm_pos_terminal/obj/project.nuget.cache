@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "jrGZ5zue5nYiCZf7Axswqj7RSHwr739RNHBoElB6WCFiMk3sZmD0duHilbD9o+opA25F205XuQomhbikdx7XSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\schoenw\\Documents\\grand_circus\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
-=======
-  "dgSpecHash": "h5h1L/jNyVdoExxGHH4UuKEBJ/CtBmV7cnY4RdB2DuzTVI3hQGyPEEptFqa7EHnmpZlzs4xiXydGaGd849I6zA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Anthony Blocton\\Desktop\\MidTermMVP\\midterm_pos_terminal\\midterm_pos_terminal\\midterm_pos_terminal.csproj",
->>>>>>> 390ef2528624e763b3d952368640e48cba86b8ff
   "expectedPackageFiles": [],
   "logs": [
     {

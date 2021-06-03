@@ -6,7 +6,7 @@ using System.Text;
 
 namespace midterm_pos_terminal
 {
-    class MenuFilesIO
+    public class MenuFilesIO
     {
         public class MenuTextFile
         {
