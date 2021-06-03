@@ -27,10 +27,5 @@ namespace midterm_pos_terminal
             Description = itDescription;
             Subtotal = itSubtotal;
         }
-          
-
-          
-
     }
-
 }
