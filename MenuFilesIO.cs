@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CashRegApp;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -10,7 +11,7 @@ namespace midterm_pos_terminal
     {
         public class MenuTextFile
         {
-            public static void WriteMenu(List<ItemProperties> itemProperties)
+            public void WriteMenu(List<ItemProperties> itemProperties)
             {
                 StreamWriter writer = new StreamWriter("../../../TestMenu.txt");
 
@@ -20,7 +21,7 @@ namespace midterm_pos_terminal
                 }
             }
 
-            public static List<ItemProperties> GetMenu(string path)
+            public List<ItemProperties> GetMenu(string path)
             {
                 List<ItemProperties> itemProperties = new List<ItemProperties>();
                 StreamReader reader = new StreamReader("../../../TestMenu.txt");

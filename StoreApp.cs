@@ -20,9 +20,9 @@ namespace CashRegApp
 
                 Console.WriteLine("Please place your order");
 
-                foreach (ItemProperties items in localMenu)
+                foreach (ItemProperties items in localMenu) // replace with providing txt file
                 {
-                    Console.WriteLine($"{items.ItemName},{items.ItemPrice},{items.ItemDescription}");
+                    Console.WriteLine($"{items.Name},{items.Price},{items.Description}");
                 }
 
                 var userchoice = Console.ReadLine().ToLower();
@@ -32,19 +32,19 @@ namespace CashRegApp
                     case "1":
                         //orders item in location 1
                         //will be expanded to give user custom options
-                        userorder.Add(new ItemProperties { ItemName = "Hamburger", ItemPrice = 2.99, ItemDescription = "Test Hamburger" });
+                        userorder.Add(new ItemProperties { Name = "Hamburger", Price = 2.99, Description = "Test Hamburger" });
 
                         break;
 
                     case "2":
                         //orders item in location 2
-                        userorder.Add(new ItemProperties { ItemName = "Hot Dog", ItemPrice = 1.99, ItemDescription = "Test Hot Dog" });
+                        userorder.Add(new ItemProperties { Name = "Hot Dog", Price = 1.99, Description = "Test Hot Dog" });
 
                         break;
 
                     case "3":
                         //orders item in location 3
-                        userorder.Add(new ItemProperties { ItemName = "Nachos", ItemPrice = 1.99, ItemDescription = "Test Nachos" });
+                        userorder.Add(new ItemProperties { Name = "Nachos", Price = 1.99, Description = "Test Nachos" });
 
                         break;
 
@@ -64,11 +64,11 @@ namespace CashRegApp
 
                     foreach (ItemProperties item1 in userorder)
                     {
-                        Console.WriteLine($"{item1.ItemName},{item1.ItemPrice},{item1.ItemDescription}");
-                        total += item1.ItemPrice;
+                        Console.WriteLine($"{item1.Name},{item1.Price},{item1.Description}");
+                        total += item1.Price;
                     }
 
-                    final_total = total;
+                    final_total = total; //is this needed?
                     Console.WriteLine($"Your total is {final_total}");
                     double outstandingbalance;
                     // double runningbalance;

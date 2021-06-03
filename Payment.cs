@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CashRegApp;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace midterm_pos_terminal
 {
-    public class Payment : ItemProperties
+    public class Payment
     {
         public static double Grandtotal { get; set; }
         public double Cash { get; set; }
@@ -14,10 +15,15 @@ namespace midterm_pos_terminal
         public DateTime Expiration { get; set; }
         public int CCcvv { get; set; }
 
+        public Payment()
+        {
+
+        }
+
 
         public Payment(double subtotal, double grandtotal, double cash, double change, int checkNumber, int ccNumber, DateTime expiration, int CVV)
         {
-            Subtotal = subtotal;
+            ItemProperties.Subtotal = subtotal;
             Grandtotal = grandtotal;
             Cash = cash;
             Change = change;
@@ -27,7 +33,7 @@ namespace midterm_pos_terminal
             CCcvv = CVV;
         }
 
-        public static string GetPaymentType() //string, int - what to search by?
+        public static void GetPaymentType() //string, int - what to search by?
         {
             Console.WriteLine("Cash, Check, or Credit Card?");
             if (Console.ReadLine().ToUpper() == "CASH") // case? also use int menu selection
