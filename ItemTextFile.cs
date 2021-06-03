@@ -1,39 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.IO;
 
 namespace CashRegApp
 {
     public class ItemTextFile
     {
-        public static List<Items> ReadItems(string path)
+        public static List<ItemProperties> ReadItems(string path)
         {
-            List<Items> items = new List<Items>();
+            List<ItemProperties> items = new List<ItemProperties>();
             StreamReader reader = new StreamReader("../../../ItemMenu.txt");
             string line = reader.ReadLine();
-            while(line != null)
+            while (line != null)
             {
                 string[] itemProperties = line.Split('|');
-                items.Add(new Items(itemProperties[0], double.Parse(itemProperties[1]), itemProperties[2]));
+                items.Add(new ItemProperties(itemProperties[0], itemProperties[1], double.Parse(itemProperties[2]), itemProperties[3])); //int.Parse(itemProperties[4])
                 line = reader.ReadLine();
             }
             reader.Close();
             return items;
         }
-        //"../../../UserOrder"
-        //"../../../ItemMenu.txt"
-        //use the writer to give managers a method to add items to the menu?
-        public static void WriteItems(List<Items> items)
+
+        //writing receipt
+        public static void WriteItems(List<ItemProperties> items)
         {
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
-            foreach(Items item in items)
+            var payment = new CashPayment();
+            foreach (ItemProperties item in items)
             {
-                writer.WriteLine($"{item.ItemName},{item.ItemPrice},{item.ItemDescription}");
+                writer.WriteLine($"{item.Name},{item.Price}");
+                payment.Subtotal += item.Price;
             }
+
+            payment.GetPaymentType();
+            writer.WriteLine($"Subtotal: {payment.Subtotal}");
+            writer.WriteLine($"Sales Tax: {payment.SalesTax}");
+            writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
+            //writer.WriteLine($"Payment method: {}");
+
             writer.Close();
         }
     }
-    
-   
 }

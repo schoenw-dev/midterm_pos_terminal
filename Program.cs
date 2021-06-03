@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CashRegApp
+﻿namespace CashRegApp
 {
     class Program
     {
