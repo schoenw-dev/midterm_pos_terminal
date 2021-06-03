@@ -34,11 +34,14 @@ namespace midterm_pos_terminal
 
         public static void GetPaymentType() //string, int - what to search by?
         {
+            grandtotal = Subtotal * 0.06;
             Console.WriteLine("Cash, Check, or Credit Card?");
             if (Console.ReadLine().ToUpper() == "CASH") // case? also use int menu selection
             {
                 Console.WriteLine("How much cash do you have?");
                 cash = double.Parse(Console.ReadLine());
+                change = cash - grandtotal;
+                Console.WriteLine($"Your chang is {change}");
             }
             else if (Console.ReadLine().ToUpper() == "CHECK")
             {
@@ -56,12 +59,6 @@ namespace midterm_pos_terminal
                 Console.WriteLine("CVV?");
                 CVV = int.Parse(Console.ReadLine());
             }
-        }
-
-        public static double GetCashChange()
-        {
-            change = cash - grandtotal;
-            return change;
         }
     }
 }
