@@ -12,7 +12,7 @@ namespace CashRegApp
             List<Items> items = new List<Items>();
             StreamReader reader = new StreamReader("../../../ItemMenu.txt");
             string line = reader.ReadLine();
-            while(line != null)
+            while (line != null)
             {
                 string[] itemProperties = line.Split('|');
                 items.Add(new Items(itemProperties[0], double.Parse(itemProperties[1]), itemProperties[2]));
@@ -27,13 +27,11 @@ namespace CashRegApp
         public static void WriteItems(List<Items> items)
         {
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
-            foreach(Items item in items)
+            foreach (Items item in items)
             {
                 writer.WriteLine($"{item.ItemName},{item.ItemPrice},{item.ItemDescription}");
             }
             writer.Close();
         }
     }
-    
-   
 }
