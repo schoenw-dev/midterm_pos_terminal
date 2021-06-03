@@ -15,7 +15,7 @@ namespace CashRegApp
             while (line != null)
             {
                 string[] itemProperties = line.Split('|');
-                items.Add(new Items(itemProperties[0], double.Parse(itemProperties[1]), itemProperties[2]));
+                items.Add(new ItemProperties(itemProperties[0], double.Parse(itemProperties[1]), itemProperties[2], itemProperties[3], itemProperties[4], double.Parse(itemProperties[5]), itemProperties[6]));
                 line = reader.ReadLine();
             }
             reader.Close();
@@ -29,7 +29,7 @@ namespace CashRegApp
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
             foreach (ItemProperties item in items)
             {
-                writer.WriteLine($"{item.ItemName},{item.ItemPrice},{item.ItemDescription}");
+                writer.WriteLine($"{item.Name},{item.Price},{item.Description}");
             }
             writer.Close();
         }

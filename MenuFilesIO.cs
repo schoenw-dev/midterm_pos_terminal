@@ -29,7 +29,7 @@ namespace midterm_pos_terminal
                 while (line != null)
                 {
                     string[] itemproperties = line.Split("|");
-                    itemProperties.Add(new ItemProperties (itemproperties[0], double.Parse(itemproperties[1]), itemproperties[2], itemproperties[3], itemproperties[4], double.Parse(itemproperties[5])));
+                    itemProperties.Add(new ItemProperties (itemproperties[0], double.Parse(itemproperties[1]), itemproperties[2], itemproperties[3], itemproperties[4], double.Parse(itemproperties[5]), itemproperties[6]));
                     line = reader.ReadLine();
                 }
 

@@ -20,10 +20,9 @@ namespace midterm_pos_terminal
 
         }
 
-
         public Payment(double subtotal, double grandtotal, double cash, double change, int checkNumber, int ccNumber, DateTime expiration, int CVV)
         {
-            ItemProperties.Subtotal = subtotal;
+            Subtotal = subtotal;
             Grandtotal = grandtotal;
             Cash = cash;
             Change = change;
@@ -64,7 +63,5 @@ namespace midterm_pos_terminal
             change = cash - grandtotal;
             return change;
         }
-
-
     }
 }
