@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace CashRegApp
 {
     public class ItemTextFile
     {
-        public static List<ItemProperties> ReadItems(string path)
+        public static void UserItemMenu()
         {
             List<ItemProperties> items = new List<ItemProperties>();
             StreamReader reader = new StreamReader("../../../ItemMenu.txt");
@@ -17,27 +18,120 @@ namespace CashRegApp
                 line = reader.ReadLine();
             }
             reader.Close();
-            return items;
+            //return items;
         }
 
-        //writing receipt
-        public static void WriteItems(List<ItemProperties> items)
+        //requesting order
+        public static void UserOrder()
         {
-            StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
-            var payment = new CashPayment();
-            foreach (ItemProperties item in items)
+            while (true)
             {
-                writer.WriteLine($"{item.Name},{item.Price}");
-                payment.Subtotal += item.Price;
+                var userSelection = ItemTextFile.UserItemMenu("../../../ItemMenu");
+
+                Console.WriteLine("Please place your order");
+
+                foreach (ItemProperties items in userSelection) // replace with providing txt file
+                {
+                    Console.WriteLine($"{items.ItemNumber},{items.Name},{items.Price}");
+                }
+
+                var userchoice = Console.ReadLine().ToLower();
+
+                if (userchoice != userSelection.ItemNumber)
+                {
+                    //case "1":
+                    //    //orders item in location 1
+                    //    //will be expanded to give user custom options
+                    //    userorder.Add(new ItemProperties { Name = "Hamburger", Price = 2.99, Description = "Test Hamburger" });
+
+                    //    break;
+
+                    //case "2":
+                    //    //orders item in location 2
+                    //    userorder.Add(new ItemProperties { Name = "Hot Dog", Price = 1.99, Description = "Test Hot Dog" });
+
+                    //    break;
+
+                    //case "3":
+                    //    //orders item in location 3
+                    //    userorder.Add(new ItemProperties { Name = "Nachos", Price = 1.99, Description = "Test Nachos" });
+
+                    //    break;
+
+                    //default:
+                    Console.WriteLine("Please select an item from our menu");
+                    continue;
+                }
+
+                Console.WriteLine("Will that be all? Y/N");
+                string userdone = Console.ReadLine().ToLower();
+
+                if (userdone != "n")
+                {
+                    ItemTextFile.WriteItems(userSelection);
+                    var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt"); //could use this to create a record of user purchases
+                    Console.WriteLine("YOUR FINAL ORDER IS");
+
+                    foreach (ItemProperties item1 in userSelection)
+                    {
+                        Console.WriteLine($"{item1.Name},{item1.Price}");
+                        Subtotal += item1.Price;
+                    }
+
+                    final_total = total; //is this needed?
+                    Console.WriteLine($"Your total is {final_total}");
+                    double outstandingbalance;
+                    // double runningbalance;
+
+                    while (true)
+                    {
+                        Console.WriteLine("Please complete payment: ");
+                        string usermoney = Console.ReadLine();
+                        double userpay = double.Parse(usermoney);
+
+                        if (final_total > userpay) //abstract into method
+                        {
+                            outstandingbalance = (final_total - userpay);
+                            Console.WriteLine($"{outstandingbalance} is you balance");
+                            final_total = outstandingbalance;
+                        }
+                        else if (userpay >= final_total)
+                        {
+                            change = (userpay - final_total);
+                            Console.WriteLine($"{change} is your change");
+                            Console.WriteLine("enjoy your meal");
+                            break;
+                        }
+                    }
+
+                    break;
+
+                }
+
+                else
+                    continue;
             }
+            //writing receipt
+            public static void WriteItems()
+            {
+                List<ItemProperties> itemos = new List<ItemProperties>();
 
-            payment.GetPaymentType();
-            writer.WriteLine($"Subtotal: {payment.Subtotal}");
-            writer.WriteLine($"Sales Tax: {payment.SalesTax}");
-            writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
-            //writer.WriteLine($"Payment method: {}");
+                StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
+                var payment = new CashPayment();
+                foreach (ItemProperties item in itemos)
+                {
+                    writer.WriteLine($"{item.Name},{item.Price}");
+                    payment.Subtotal += item.Price;
+                }
 
-            writer.Close();
+                payment.GetPaymentType();
+                writer.WriteLine($"Subtotal: {payment.Subtotal}");
+                writer.WriteLine($"Sales Tax: {payment.SalesTax}");
+                writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
+                //writer.WriteLine($"Payment method: {}");
+
+                writer.Close();
+            }
         }
     }
 }
