@@ -113,7 +113,29 @@ namespace CashRegApp
         //    }
 
         //writing receipt
-        public static List<ItemProperties> WriteItems()
+        //public static List<ItemProperties> WriteItems()
+        //{
+        //    List<ItemProperties> itemos = new List<ItemProperties>();
+
+        //    StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
+        //    var payment = new CashPayment();
+        //    foreach (ItemProperties item in itemos)
+        //    {
+        //        writer.WriteLine($"{item.Name},{item.Price}"); //{item.Quantity}
+        //        payment.Subtotal += item.Price;
+        //    }
+
+        //    payment.GetTotalDue();
+        //    writer.WriteLine($"Subtotal: {payment.Subtotal}");
+        //    writer.WriteLine($"Sales Tax: {payment.SalesTax}");
+        //    writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
+        //    writer.WriteLine($"Payment method: {payment.PaymentMethod}");
+
+        //    writer.Close();
+        //    return itemos;
+        //}
+
+        public static void WriteItems()
         {
             List<ItemProperties> itemos = new List<ItemProperties>();
 
@@ -121,7 +143,7 @@ namespace CashRegApp
             var payment = new CashPayment();
             foreach (ItemProperties item in itemos)
             {
-                writer.WriteLine($"{item.Name},{item.Price}");
+                writer.WriteLine($"{item.Name},{item.Price}"); //{item.Quantity}
                 payment.Subtotal += item.Price;
             }
 
@@ -129,10 +151,9 @@ namespace CashRegApp
             writer.WriteLine($"Subtotal: {payment.Subtotal}");
             writer.WriteLine($"Sales Tax: {payment.SalesTax}");
             writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
-            //writer.WriteLine($"Payment method: {}");
+            writer.WriteLine($"Payment method: {payment.PaymentMethod}");
 
             writer.Close();
-            return itemos;
         }
     }
 }

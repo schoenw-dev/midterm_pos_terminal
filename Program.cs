@@ -11,12 +11,11 @@ namespace CashRegApp
             //StoreApp.UserItemMenu();
             List<ItemProperties> userOrder = new List<ItemProperties>();
 
-            var app = new ItemTextFile();
-
-            var userItemList = ItemTextFile.ReadItemMenu();
+            var itemMenuList = ItemTextFile.ReadItemMenu();
+            bool userChoosing = true;
             //var userReceipt = ItemTextFile.WriteItems();
 
-            foreach (var item in userItemList)
+            foreach (var item in itemMenuList)
             {
                 Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price:C} | {item.Description}");
             }
@@ -24,21 +23,32 @@ namespace CashRegApp
             Console.WriteLine("\nWhat # would you like to order?");
             string userSelection = Console.ReadLine();
 
-            foreach (var item in userItemList)
+            while (userChoosing)
             {
-                if (userSelection == item.ItemNumber)
+                foreach (var item in itemMenuList)
                 {
-                    //add to userOrder.txt
-                    //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
+                    if (userSelection == item.ItemNumber)
+                    {
+                        //add to userOrder.txt
+                        //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
 
-                    //    userorder.Add(new ItemProperties ...
+                        //    userorder.Add(new ItemProperties ...
 
-                    //        ItemTextFile.WriteItems(userorder);
-                    //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
+                                ItemTextFile.WriteItems();
+                        //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please select an item from our menu");
+                    }
                 }
-
+                //Quantity?
+                Console.WriteLine("Anything else? # or N");
+                if (Console.ReadLine().ToUpper() == "N")
+                {
+                    userChoosing = false;
+                }
             }
-
         }
 
 
