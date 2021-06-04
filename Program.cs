@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CashRegApp
 {
@@ -21,6 +22,7 @@ namespace CashRegApp
 
             //TODO: move elsewhere?
             Console.WriteLine("\nWhat # would you like to order?");
+            //TODO: add catch, catch N or other invalid selections
             int userSelection = int.Parse(Console.ReadLine());
 
             while (userChoosing)
@@ -34,6 +36,10 @@ namespace CashRegApp
                         //add to userOrder.txt
                         //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
                         userOrder.Add(item);
+                        for (int i = 0; i < userOrder.Count; i++)
+                        {
+                            StringBuilder userItem = new StringBuilder(i);
+                        }
 
                         //    userorder.Add(new ItemProperties ...
                         //userOrder.CopyTo(userSelection, userOrder.ToArray(), userOrder.Count + 1, 2);
@@ -58,17 +64,14 @@ namespace CashRegApp
                 if (!valid)
                 {
                     Console.WriteLine("Please choose a correct selection");
+                    userSelection = int.Parse(Console.ReadLine());
                 }
 
-                
+
             }
         }
-        ItemTextFile.WriteItems();
-        }
-
-
-    //ItemTextFile.WriteItems();
-
+        //ItemTextFile.WriteItems();
+    }
 }
-}
+
 
