@@ -25,36 +25,50 @@ namespace CashRegApp
 
             while (userChoosing)
             {
+                bool valid = false;
+
                 foreach (var item in itemMenuList)
                 {
                     if (userSelection == int.Parse(item.ItemNumber))
                     {
                         //add to userOrder.txt
                         //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
-                        userOrder.Add(new ItemProperties(item.ItemNumber, item.Name, item.Price, item.Description));
-                        
+                        userOrder.Add(item);
+
                         //    userorder.Add(new ItemProperties ...
                         //userOrder.CopyTo(userSelection, userOrder.ToArray(), userOrder.Count + 1, 2);
-                                ItemTextFile.WriteItems();
+
                         //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
-                    }
-                    else if (userSelection != int.Parse(item.ItemNumber))
-                    {
-                        Console.WriteLine("Please select an item from our menu");
+                        valid = true;
+
+                        //TODO: Quantity?
+                        Console.WriteLine("Anything else? # or N");
+                        var input = Console.ReadLine().ToUpper();
+                        if (input == "N")
+                        {
+                            userChoosing = false;
+                        }
+                        else
+                        {
+                            userSelection = int.Parse(input);
+                        }
                     }
                 }
-                //TODO: Quantity?
-                Console.WriteLine("Anything else? # or N");
-                if (Console.ReadLine().ToUpper() == "N")
+
+                if (!valid)
                 {
-                    userChoosing = false;
+                    Console.WriteLine("Please choose a correct selection");
                 }
+
+                
             }
+        }
+        ItemTextFile.WriteItems();
         }
 
 
-        //ItemTextFile.WriteItems();
+    //ItemTextFile.WriteItems();
 
-    }
+}
 }
 
