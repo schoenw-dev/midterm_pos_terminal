@@ -53,6 +53,7 @@ namespace CashRegApp
                         if (input == "N")
                         {
                             userChoosing = false;
+                            ItemTextFile.WriteItems();
                         }
                         else
                         {
@@ -66,11 +67,9 @@ namespace CashRegApp
                     Console.WriteLine("Please choose a correct selection");
                     userSelection = int.Parse(Console.ReadLine());
                 }
-
-
             }
         }
-        //ItemTextFile.WriteItems();
+        //
     }
 }
 
