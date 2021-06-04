@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CashRegApp
 {
@@ -8,6 +9,7 @@ namespace CashRegApp
         {
             //var app = new StoreApp();
             //StoreApp.UserItemMenu();
+            List<ItemProperties> userOrder = new List<ItemProperties>();
 
             var app = new ItemTextFile();
 
@@ -16,18 +18,23 @@ namespace CashRegApp
 
             foreach (var item in userItemList)
             {
-                Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price} | {item.Description}");
+                Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price:C} | {item.Description}");
             }
 
             Console.WriteLine("\nWhat # would you like to order?");
-            string userOrder = Console.ReadLine();
+            string userSelection = Console.ReadLine();
 
             foreach (var item in userItemList)
             {
-                if (userOrder == item.ItemNumber)
+                if (userSelection == item.ItemNumber)
                 {
-                    //add to userOrder
+                    //add to userOrder.txt
+                    //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
 
+                    //    userorder.Add(new ItemProperties ...
+
+                    //        ItemTextFile.WriteItems(userorder);
+                    //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
                 }
 
             }

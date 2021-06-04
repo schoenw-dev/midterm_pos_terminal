@@ -125,7 +125,7 @@ namespace CashRegApp
                 payment.Subtotal += item.Price;
             }
 
-            payment.GetPaymentType();
+            payment.GetTotalDue();
             writer.WriteLine($"Subtotal: {payment.Subtotal}");
             writer.WriteLine($"Sales Tax: {payment.SalesTax}");
             writer.WriteLine($"Grandtotal: {payment.Grandtotal}");

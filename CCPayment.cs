@@ -8,9 +8,9 @@ namespace CashRegApp
         public DateTime Expiration { get; set; }
         public int CCcvv { get; set; }
 
-        public override void GetPaymentType()
+        public override void GetTotalDue()
         {
-            base.GetPaymentType();
+            base.GetTotalDue();
 
             if (PaymentMethod == "CREDIT CARD")
             {

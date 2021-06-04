@@ -6,9 +6,9 @@ namespace CashRegApp
     {
         public int CheckNumber { get; set; }
 
-        public override void GetPaymentType()
+        public override void GetTotalDue()
         {
-            base.GetPaymentType();
+            base.GetTotalDue();
             if (PaymentMethod == "CHECK")
             {
                 Console.WriteLine("check #?");

@@ -9,7 +9,7 @@ namespace CashRegApp
         public double Grandtotal { get; set; }
         public string PaymentMethod { get; set; }
 
-        public virtual void GetPaymentType()
+        public virtual void GetTotalDue()
         {
             SalesTax = Subtotal * 0.06;
             Grandtotal = Subtotal + SalesTax;

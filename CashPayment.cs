@@ -8,17 +8,19 @@ namespace CashRegApp
         public double Change { get; set; }
 
 
-        public override void GetPaymentType()
+        public override void GetTotalDue()
         {
-            base.GetPaymentType();
+            base.GetTotalDue();
             if (PaymentMethod == "CASH")
             {
                 Console.WriteLine("How much cash do you have?");
                 Cash = double.Parse(Console.ReadLine());
-                Change = Cash - Grandtotal;
-                Console.WriteLine($"Your change is {Change}");
+                if (Cash > Grandtotal)
+                {
+                    Change = Cash - Grandtotal;
+                    Console.WriteLine($"Your change is {Change}");
+                }
             }
         }
-
     }
 }
