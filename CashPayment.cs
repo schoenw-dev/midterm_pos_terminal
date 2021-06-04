@@ -7,7 +7,6 @@ namespace CashRegApp
         public double Cash { get; set; }
         public double Change { get; set; }
 
-
         public override void GetTotalDue()
         {
             base.GetTotalDue();

@@ -18,7 +18,7 @@ namespace CashRegApp
                 CCNumber = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("expiration?");
-                Expiration = DateTime.Parse(Console.ReadLine());
+                Expiration = DateTime.Parse(Console.ReadLine()); //TODO: valid entry?
 
                 Console.WriteLine("CVV?");
                 CCcvv = int.Parse(Console.ReadLine());
@@ -26,5 +26,5 @@ namespace CashRegApp
         }
     }
 
-    
+
 }

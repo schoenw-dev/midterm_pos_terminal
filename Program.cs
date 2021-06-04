@@ -10,7 +10,6 @@ namespace CashRegApp
             //var app = new StoreApp();
             //StoreApp.UserItemMenu();
             List<ItemProperties> userOrder = new List<ItemProperties>();
-
             var itemMenuList = ItemTextFile.ReadItemMenu();
             bool userChoosing = true;
             //var userReceipt = ItemTextFile.WriteItems();
@@ -20,29 +19,31 @@ namespace CashRegApp
                 Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price:C} | {item.Description}");
             }
 
+            //TODO: move elsewhere?
             Console.WriteLine("\nWhat # would you like to order?");
-            string userSelection = Console.ReadLine();
+            int userSelection = int.Parse(Console.ReadLine());
 
             while (userChoosing)
             {
                 foreach (var item in itemMenuList)
                 {
-                    if (userSelection == item.ItemNumber)
+                    if (userSelection == int.Parse(item.ItemNumber))
                     {
                         //add to userOrder.txt
                         //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
-
+                        userOrder.Add(new ItemProperties(item.ItemNumber, item.Name, item.Price, item.Description));
+                        
                         //    userorder.Add(new ItemProperties ...
-
+                        //userOrder.CopyTo(userSelection, userOrder.ToArray(), userOrder.Count + 1, 2);
                                 ItemTextFile.WriteItems();
                         //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
                     }
-                    else
+                    else if (userSelection != int.Parse(item.ItemNumber))
                     {
                         Console.WriteLine("Please select an item from our menu");
                     }
                 }
-                //Quantity?
+                //TODO: Quantity?
                 Console.WriteLine("Anything else? # or N");
                 if (Console.ReadLine().ToUpper() == "N")
                 {

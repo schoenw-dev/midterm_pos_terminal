@@ -13,8 +13,6 @@ namespace CashRegApp
         {
             SalesTax = Subtotal * 0.06;
             Grandtotal = Subtotal + SalesTax;
-            Console.WriteLine("Cash, Check, or Credit Card?");
-            PaymentMethod = Console.ReadLine().ToUpper();
         }
         //switch statement to determine payment type, which is used in child class
     }

@@ -140,7 +140,44 @@ namespace CashRegApp
             List<ItemProperties> itemos = new List<ItemProperties>();
 
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
-            var payment = new CashPayment();
+            bool valid = false;
+            Console.WriteLine("Cash, Check, or Credit Card?");
+            string paymentMethod = Console.ReadLine().ToUpper();
+
+            //TODO: move elsewhere?
+            Payment payment = null;
+            while (!valid)
+            {
+                switch (paymentMethod)
+                {
+                    case "CASH":
+                        {
+                            payment = new CashPayment();
+                            valid = true;
+                        }
+                        break;
+                    case "CHECK":
+                        {
+                            payment = new CheckPayment();
+                            valid = true;
+                        }
+                        break;
+                    case "CREDIT CARD":
+                        {
+                            payment = new CCPayment();
+                            valid = true;
+                        }
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("INVALD");
+                            valid = false;
+                        }
+                        break;
+                }
+            }
+            payment.PaymentMethod = paymentMethod;
+
             foreach (ItemProperties item in itemos)
             {
                 writer.WriteLine($"{item.Name},{item.Price}"); //{item.Quantity}
@@ -152,7 +189,6 @@ namespace CashRegApp
             writer.WriteLine($"Sales Tax: {payment.SalesTax}");
             writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
             writer.WriteLine($"Payment method: {payment.PaymentMethod}");
-
             writer.Close();
         }
     }
