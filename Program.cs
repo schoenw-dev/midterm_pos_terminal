@@ -25,6 +25,8 @@ namespace CashRegApp
             //TODO: add catch, catch N or other invalid selections
             int userSelection = int.Parse(Console.ReadLine());
 
+            Payment payment = null;
+
             while (userChoosing)
             {
                 bool valid = false;
@@ -33,18 +35,8 @@ namespace CashRegApp
                 {
                     if (userSelection == int.Parse(item.ItemNumber))
                     {
-                        //add to userOrder.txt
-                        //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
                         userOrder.Add(item);
-                        for (int i = 0; i < userOrder.Count; i++)
-                        {
-                            StringBuilder userItem = new StringBuilder(i);
-                        }
 
-                        //    userorder.Add(new ItemProperties ...
-                        //userOrder.CopyTo(userSelection, userOrder.ToArray(), userOrder.Count + 1, 2);
-
-                        //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
                         valid = true;
 
                         //TODO: Quantity?
@@ -53,7 +45,7 @@ namespace CashRegApp
                         if (input == "N")
                         {
                             userChoosing = false;
-                            ItemTextFile.WriteItems();
+                            payment = ItemTextFile.WriteItems(userOrder);
                         }
                         else
                         {
@@ -68,8 +60,21 @@ namespace CashRegApp
                     userSelection = int.Parse(Console.ReadLine());
                 }
             }
+
+            var userList = new StringBuilder();
+
+            foreach (var item in userOrder)
+            {
+                userList.AppendLine($"{item.Name} | {item.Price}");
+            }
+
+            userList.AppendLine($"Subtotal: {payment.Subtotal:C}")
+                .AppendLine($"Sales Tax: {payment.SalesTax:C}")
+                .AppendLine($"Grandtotal: {payment.Grandtotal:C}")
+                .AppendLine($"Payment method: {payment.PaymentMethod}");
+
+            Console.WriteLine(userList.ToString());
         }
-        //
     }
 }
 

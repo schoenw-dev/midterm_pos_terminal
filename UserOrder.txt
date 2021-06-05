@@ -1,4 +1,8 @@
-Subtotal: 0
-Sales Tax: 0
-Grandtotal: 0
-Payment method: CHECK
+Fried Pickles,$4.00
+Sundae,$3.00
+Soft-serve,$2.00
+Hot Dog,$1.99
+Subtotal: $10.99
+Sales Tax: $0.66
+Grandtotal: $11.65
+Payment method: CASH

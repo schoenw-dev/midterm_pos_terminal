@@ -4,7 +4,7 @@ IDEAS (not necessary to complete project, just nice to have):
 	- auto close when requested items selected
 3. QA (Quality Assurance)! - How could it break, where are holes, and how to patch/prevent?
 4. Customer (class) account details: rewards, loyalty, 
-5. Confirm double price is to hundredth place (= $X.xx)
+5. Confirm decimal price is to hundredth place (= $X.xx)
 6. @2130, solve merge conflicts
 7. multiple txt files for items/properties?
 	- flavors, price

@@ -14,17 +14,15 @@ namespace CashRegApp
             while (line != null)
             {
                 string[] itemProperties = line.Split('|');
-                items.Add(new ItemProperties(itemProperties[0], itemProperties[1], double.Parse(itemProperties[2]), itemProperties[3])); //TODO: int.Parse(itemProperties[4])
+                items.Add(new ItemProperties(itemProperties[0], itemProperties[1], decimal.Parse(itemProperties[2]), itemProperties[3])); //TODO: int.Parse(itemProperties[4])
                 line = reader.ReadLine();
             }
             reader.Close();
             return items;
         }
 
-        public static void WriteItems()
+        public static Payment WriteItems(List<ItemProperties> items)
         {
-            List<ItemProperties> itemos = new List<ItemProperties>();
-
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
             bool valid = false;
             Console.WriteLine("Cash, Check, or Credit Card?");
@@ -64,18 +62,20 @@ namespace CashRegApp
             }
             payment.PaymentMethod = paymentMethod;
 
-            foreach (ItemProperties item in itemos)
+            foreach (ItemProperties item in items)
             {
-                writer.WriteLine($"{item.Name},{item.Price}"); //{item.Quantity}
+                writer.WriteLine($"{item.Name},{item.Price:C}"); //{item.Quantity}
                 payment.Subtotal += item.Price;
             }
 
             payment.GetTotalDue();
-            writer.WriteLine($"Subtotal: {payment.Subtotal}");
-            writer.WriteLine($"Sales Tax: {payment.SalesTax}");
-            writer.WriteLine($"Grandtotal: {payment.Grandtotal}");
+            writer.WriteLine($"Subtotal: {payment.Subtotal:C}");
+            writer.WriteLine($"Sales Tax: {payment.SalesTax:C}");
+            writer.WriteLine($"Grandtotal: {payment.Grandtotal:C}");
             writer.WriteLine($"Payment method: {payment.PaymentMethod}");
             writer.Close();
+
+            return payment;
         }
     }
 }

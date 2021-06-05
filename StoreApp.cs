@@ -8,9 +8,9 @@ namespace CashRegApp
     //    public static void UserItemMenu()
     //    {
     //        List<ItemProperties> userorder = new List<ItemProperties>();
-    //        double total = 0;
-    //        double final_total;
-    //        double change;
+    //        decimal total = 0;
+    //        decimal final_total;
+    //        decimal change;
 
     //        while (true)
     //        {
@@ -49,14 +49,14 @@ namespace CashRegApp
 
     //                final_total = total; //is this needed?
     //                Console.WriteLine($"Your total is {final_total}");
-    //                double outstandingbalance;
-    //                // double runningbalance;
+    //                decimal outstandingbalance;
+    //                // decimal runningbalance;
 
     //                while (true)
     //                {
     //                    Console.WriteLine("Please complete payment: ");
     //                    string usermoney = Console.ReadLine();
-    //                    double userpay = double.Parse(usermoney);
+    //                    decimal userpay = decimal.Parse(usermoney);
 
     //                    if (final_total > userpay) //abstract into method
     //                    {
