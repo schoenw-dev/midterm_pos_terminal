@@ -23,7 +23,7 @@ DONE! (Console) 9. Ask for the payment type--cash, credit, or check.
 	b. For check, get the check number.
 	c. For credit, get the credit card  number, expiration, and CVV.
 
-10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
+DONE! (UserOrder.txt) 10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
 
 11. Return to the original menu for a new order. (Hint you’ll want an array or List to keep track of what’s been
 	ordered!)

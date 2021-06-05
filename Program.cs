@@ -34,7 +34,8 @@ namespace CashRegApp
                 foreach (var item in itemMenuList)
                 {
                     if (userSelection == int.Parse(item.ItemNumber))
-                    {
+                    {//TODO: ask for quantity
+                        Console.WriteLine("How many?");
                         userOrder.Add(item);
 
                         valid = true;
