@@ -1,8 +1,6 @@
-Fried Pickles,$4.00
-Sundae,$3.00
-Soft-serve,$2.00
-Hot Dog,$1.99
-Subtotal: $10.99
-Sales Tax: $0.66
-Grandtotal: $11.65
+Nachos | $2.49
+Nachos | $2.49
+Subtotal: $4.98
+Sales Tax: $0.30
+Grandtotal: $5.28
 Payment method: CASH

@@ -52,7 +52,7 @@ namespace CashRegApp
                             valid = true;
                         }
                         break;
-                    default:
+                    default: //TODO: improved catch?
                         {
                             Console.WriteLine("INVALD");
                             valid = false;
@@ -64,7 +64,7 @@ namespace CashRegApp
 
             foreach (ItemProperties item in items)
             {
-                writer.WriteLine($"{item.Name},{item.Price:C}"); //{item.Quantity}
+                writer.WriteLine($"{item.Name} | {item.Price:C}"); //TODO: {item.Quantity}
                 payment.Subtotal += item.Price;
             }
 

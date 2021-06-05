@@ -23,7 +23,7 @@ namespace CashRegApp
             //TODO: move elsewhere?
             Console.WriteLine("\nWhat # would you like to order?");
             //TODO: add catch, catch N or other invalid selections
-            int userSelection = int.Parse(Console.ReadLine());
+            string userSelection = Console.ReadLine().ToUpper();
 
             Payment payment = null;
 
@@ -33,11 +33,15 @@ namespace CashRegApp
 
                 foreach (var item in itemMenuList)
                 {
-                    if (userSelection == int.Parse(item.ItemNumber))
+                    if (userSelection == item.ItemNumber)
                     {//TODO: ask for quantity
                         Console.WriteLine("How many?");
-                        userOrder.Add(item);
-
+                        int quantity = int.Parse(Console.ReadLine());
+                        for (int i = 1; i <= quantity; i++)
+                        {
+                            userOrder.Add(item);
+                        }
+                        
                         valid = true;
 
                         //TODO: Quantity?
@@ -50,7 +54,7 @@ namespace CashRegApp
                         }
                         else
                         {
-                            userSelection = int.Parse(input);
+                            userSelection = input;
                         }
                     }
                 }
@@ -58,7 +62,7 @@ namespace CashRegApp
                 if (!valid)
                 {
                     Console.WriteLine("Please choose a correct selection");
-                    userSelection = int.Parse(Console.ReadLine());
+                    userSelection = Console.ReadLine().ToUpper();
                 }
             }
 
@@ -66,7 +70,7 @@ namespace CashRegApp
 
             foreach (var item in userOrder)
             {
-                userList.AppendLine($"{item.Name} | {item.Price}");
+                userList.AppendLine($"{item.Name} | {item.Price}"); //TODO: quantity
             }
 
             userList.AppendLine($"Subtotal: {payment.Subtotal:C}")
