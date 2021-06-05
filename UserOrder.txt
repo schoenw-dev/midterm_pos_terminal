@@ -1,0 +1,4 @@
+Subtotal: 0
+Sales Tax: 0
+Grandtotal: 0
+Payment method: CHECK

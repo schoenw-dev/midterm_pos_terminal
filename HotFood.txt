@@ -1,0 +1,4 @@
+﻿Burger | 5.00
+Chicken Tenders | 4.50
+Footlong | 2.50
+Fried Pickles | 4.00

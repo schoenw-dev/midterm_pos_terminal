@@ -1,0 +1,12 @@
+1|Hamburger|2.99|Char-grilled patty between toasted bun
+2|Hot Dog|1.99|Grilled footlong between golden bun
+3|Nachos|2.49|Corn tortillas covered in melted queso
+4|Wings|3.39|Six, hand-battered & seasoned
+5|Fried Pickles|4.00|Crunchy dill slices
+6|Sundae|3.00|whipped cream or oreo crumbles
+7|Deluxe Sundae|4.00|hot fudge, molten caramel, strawberry drizzle, or marshmallow fluff
+8|Ice Cream|2.50|M&M's, sprinkles, gummy worms, or reese's pieces
+9|Ultimate Ice Cream|3.50|brownie bites, cheesecake bits, cookie dough, or kitkat
+10|Soft-serve|2.00|vanilla, chocolate, strawberry, mint chocolate chip, or bubble gum
+11|Deluxe Soft-serve|3.50|chocolate-dipped sugar, waffle, or cake cone
+12|Ultimate Soft-serve|5.00|deluxe soft-serve in large bowl
