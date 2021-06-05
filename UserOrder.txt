@@ -1,6 +1,0 @@
-Nachos | $2.49
-Nachos | $2.49
-Subtotal: $4.98
-Sales Tax: $0.30
-Grandtotal: $5.28
-Payment method: CASH

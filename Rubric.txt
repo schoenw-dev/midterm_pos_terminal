@@ -7,11 +7,11 @@ DONE! (ItemMenu.txt) 2. 12 items minimum; they must be stored in a text file you
 	
 DONE! (Console) 3. Present a menu to the user and let them choose an item (by number or letter).
 	
-4. Allow the user to choose a quantity for the item ordered.
+DONE! (Program) 4. Allow the user to choose a quantity for the item ordered.
 
 5. Give the user a line total (item | price | quantity).
 
-6. Either through a menu or a separate question, allow them to re-display the menu and to complete the purchase.
+DONE! (Program) 6. Either through a menu or a separate question, allow them to re-display the menu and to complete the purchase.
 
 DONE! (UserOrder.txt) 7. Give the subtotal, sales tax, and grand total.
 
@@ -25,7 +25,7 @@ DONE! (Console) 9. Ask for the payment type--cash, credit, or check.
 
 DONE! (UserOrder.txt) 10. At the end, display a receipt with all items ordered, subtotal, grand total, and appropriate payment info.
 
-11. Return to the original menu for a new order. (Hint you’ll want an array or List to keep track of what’s been
+DONE! (Program) 11. Return to the original menu for a new order. (Hint you’ll want an array or List to keep track of what’s been
 	ordered!)
 
 12. Optional enhancements (Moderate) Include an option to add to the product list, which then outputs to the

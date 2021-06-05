@@ -25,7 +25,7 @@ namespace CashRegApp
         {
             StreamWriter writer = new StreamWriter("../../../UserOrder.txt");
             bool valid = false;
-            Console.WriteLine("Cash, Check, or Credit Card?");
+            Console.WriteLine("\nCash, Check, or Credit Card?");
             string paymentMethod = Console.ReadLine().ToUpper();
 
             //TODO: move elsewhere?
