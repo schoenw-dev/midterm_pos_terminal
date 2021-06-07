@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CashRegApp
 {
@@ -7,53 +8,102 @@ namespace CashRegApp
     {
         static void Main(string[] args)
         {
-            //var app = new StoreApp();
-            //StoreApp.UserItemMenu();
-            List<ItemProperties> userOrder = new List<ItemProperties>();
-
-            var itemMenuList = ItemTextFile.ReadItemMenu();
-            bool userChoosing = true;
-            //var userReceipt = ItemTextFile.WriteItems();
-
-            foreach (var item in itemMenuList)
+            bool ordering = true;
+            while (ordering)
             {
-                Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price:C} | {item.Description}");
-            }
+                List<ItemProperties> userOrder = new List<ItemProperties>();
+                var itemMenuList = ItemTextFile.ReadItemMenu();
+                bool userChoosing = true;
+                //var userReceipt = ItemTextFile.WriteItems();
 
-            Console.WriteLine("\nWhat # would you like to order?");
-            string userSelection = Console.ReadLine();
-
-            while (userChoosing)
-            {
                 foreach (var item in itemMenuList)
                 {
-                    if (userSelection == item.ItemNumber)
+                    Console.WriteLine($"{item.ItemNumber} | {item.Name} | {item.Price:C} | {item.Description}");
+                }
+
+                //TODO: move elsewhere?
+                Console.WriteLine("\nWhat # would you like to order?");
+                //TODO: add catch, catch N or other invalid selections
+                string userSelection = Console.ReadLine().ToUpper();
+
+                Payment payment = null;
+
+                while (userChoosing)
+                {
+                    bool valid = false;
+
+                    foreach (var item in itemMenuList)
                     {
-                        //add to userOrder.txt
-                        //https://stackoverflow.com/questions/15456845/getting-a-list-item-by-index
+                        if (userSelection == item.ItemNumber)
+                        {//TODO: ask for quantity
+                            Console.WriteLine("\nHow many?");
+                            int quantity = int.Parse(Console.ReadLine());
+                            for (int i = 1; i <= quantity; i++)
+                            {
+                                userOrder.Add(item);
+                            }
 
-                        //    userorder.Add(new ItemProperties ...
+                            valid = true;
+                        }
+                    }
 
-                                ItemTextFile.WriteItems();
-                        //        var finalList = ItemTextFile.ReadItems("../../../UserOrder.txt");
+                    if (!valid && !(userSelection != "MENU" || userSelection != "M"))
+                    {
+                        Console.WriteLine("\nPlease make a valid # selection from the menu");
+                    }
+
+                    //TODO: Quantity?
+                    Console.WriteLine("\nAnything else? Item #, Menu, or No");
+                    var input = Console.ReadLine().ToUpper();
+                    if (input == "N" || input == "NO")
+                    {
+                        userChoosing = false;
+                        payment = ItemTextFile.WriteItems(userOrder);
+                    }
+                    else if (input == "MENU" || input == "M")
+                    {
+                        foreach (var items in itemMenuList)
+                        {
+                            Console.WriteLine($"{items.ItemNumber} | {items.Name} | {items.Price:C} | {items.Description}");
+                        }
+                        userChoosing = true;
+                        userSelection = null;
+                        valid = false;
                     }
                     else
                     {
-                        Console.WriteLine("Please select an item from our menu");
+                        userSelection = input;
                     }
                 }
-                //Quantity?
-                Console.WriteLine("Anything else? # or N");
-                if (Console.ReadLine().ToUpper() == "N")
+
+                var userList = new StringBuilder();
+
+                foreach (var item in userOrder)
                 {
-                    userChoosing = false;
+                    userList.AppendLine($"{item.Name} | {item.Price}"); //TODO: quantity
+                }
+
+                userList.AppendLine($"Subtotal: {payment.Subtotal:C}")
+                    .AppendLine($"Sales Tax: {payment.SalesTax:C}")
+                    .AppendLine($"Grandtotal: {payment.Grandtotal:C}")
+                    .AppendLine($"Payment method: {payment.PaymentMethod}");
+
+                Console.WriteLine(userList.ToString());
+
+                Console.WriteLine("New Order? Y or N");
+                string newOrder = Console.ReadLine().ToUpper();
+                if (newOrder == "Y")
+                {
+                    ordering = true;
+                }
+                else if (newOrder == "N")
+                {
+                    ordering = false;
+                    Console.WriteLine("Thanks, BYE!");
                 }
             }
         }
-
-
-        //ItemTextFile.WriteItems();
-
     }
 }
+
 

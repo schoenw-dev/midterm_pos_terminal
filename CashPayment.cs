@@ -4,9 +4,8 @@ namespace CashRegApp
 {
     class CashPayment : Payment
     {
-        public double Cash { get; set; }
-        public double Change { get; set; }
-
+        public decimal Cash { get; set; }
+        public decimal Change { get; set; }
 
         public override void GetTotalDue()
         {
@@ -14,11 +13,11 @@ namespace CashRegApp
             if (PaymentMethod == "CASH")
             {
                 Console.WriteLine("How much cash do you have?");
-                Cash = double.Parse(Console.ReadLine());
+                Cash = decimal.Parse(Console.ReadLine());
                 if (Cash > Grandtotal)
                 {
                     Change = Cash - Grandtotal;
-                    Console.WriteLine($"Your change is {Change}");
+                    Console.WriteLine($"Your change is {Change:C}");
                 }
             }
         }
