@@ -1,0 +1,16 @@
+Soft-serve | $2.00
+Hamburger | $2.99
+Hot Dog | $1.99
+Fried Pickles | $4.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Sundae | $3.00
+Subtotal: $34.98
+Sales Tax: $2.10
+Grandtotal: $37.08
+Payment method: CASH

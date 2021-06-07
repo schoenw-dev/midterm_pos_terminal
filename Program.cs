@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace CashRegApp
 {
@@ -11,6 +12,7 @@ namespace CashRegApp
             bool ordering = true;
             while (ordering)
             {
+                
                 List<ItemProperties> userOrder = new List<ItemProperties>();
                 var itemMenuList = ItemTextFile.ReadItemMenu();
                 bool userChoosing = true;
@@ -32,7 +34,7 @@ namespace CashRegApp
                 {
                     bool valid = false;
 
-                    foreach (var item in itemMenuList)
+                    foreach (var item in itemMenuList) //note for quantity
                     {
                         if (userSelection == item.ItemNumber)
                         {//TODO: ask for quantity
@@ -42,6 +44,8 @@ namespace CashRegApp
                             {
                                 userOrder.Add(item);
                             }
+
+                            //save quantity to list here(?)
 
                             valid = true;
                         }
@@ -78,10 +82,30 @@ namespace CashRegApp
 
                 var userList = new StringBuilder();
 
-                foreach (var item in userOrder)
+                /* var q = userOrder.GroupBy(x => x)
+                     .Select(g => new { Value = g.Key, Count = g.Count() })
+                     .OrderByDescending(x => x.Count); */
+
+                var coutitemslist = userOrder.Distinct().ToList();
+
+                foreach (var item in coutitemslist) //trying new solution for formatting
+                 {
+                     userList.AppendLine($"{item.Name} | x{userOrder.Where(x => x.Name == item.Name).ToList().Count} | {item.Price}"); //TODO: quantity //make item quantity list?
+                 } 
+
+                //var ListOut = new List<ItemProperties>();
+
+                
+
+              /*   var q = userList.GroupBy(x => x)
+                    .Select(g => new { Value = g.Key, Count = g.Count() })
+                    .OrderByDescending(x => x.Count);
+
+                foreach (var x in q)
                 {
-                    userList.AppendLine($"{item.Name} | {item.Price}"); //TODO: quantity
-                }
+                    Console.WriteLine($"{x.Value} x{x.Count}");
+                } */
+
 
                 userList.AppendLine($"Subtotal: {payment.Subtotal:C}")
                     .AppendLine($"Sales Tax: {payment.SalesTax:C}")
