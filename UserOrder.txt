@@ -1,0 +1,4 @@
+Subtotal: $0.00
+Sales Tax: $0.00
+Grandtotal: $0.00
+Payment method: CHECK

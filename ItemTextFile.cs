@@ -6,6 +6,9 @@ namespace CashRegApp
 {
     public class ItemTextFile
     {
+        //List<ItemProperties> userOrder = new List<ItemProperties>();
+        //var countItemsList = userOrder.Distinct().ToList();
+
         public static List<ItemProperties> ReadItemMenu()
         {
             List<ItemProperties> items = new List<ItemProperties>();
@@ -47,6 +50,7 @@ namespace CashRegApp
                         }
                         break;
                     case "CREDIT CARD":
+                    case "CARD":
                         {
                             payment = new CCPayment();
                             valid = true;
@@ -64,7 +68,8 @@ namespace CashRegApp
 
             foreach (ItemProperties item in items)
             {
-                writer.WriteLine($"{item.Name} | {item.Price:C}"); //TODO: {item.Quantity}
+                //writer.WriteLine($"{item.Name} | x{userOrder.Where(x => x.Name == item.Name).ToList().Count} | {item.Price:C}"); //TODO: {item.Quantity}
+                writer.WriteLine($"{item.Name} | {item.Price:C}");
                 payment.Subtotal += item.Price;
             }
 

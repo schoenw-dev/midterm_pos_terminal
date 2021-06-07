@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CashRegApp
@@ -8,6 +9,7 @@ namespace CashRegApp
     {
         static void Main(string[] args)
         {
+            var userList = new StringBuilder();
             bool ordering = true;
             while (ordering)
             {
@@ -76,11 +78,11 @@ namespace CashRegApp
                     }
                 }
 
-                var userList = new StringBuilder();
+                var coutitemslist = userOrder.Distinct().ToList();
 
-                foreach (var item in userOrder)
+                foreach (var item in coutitemslist) //trying new solution for formatting
                 {
-                    userList.AppendLine($"{item.Name} | {item.Price}"); //TODO: quantity
+                    userList.AppendLine($"{item.Name} | x{userOrder.Where(x => x.Name == item.Name).ToList().Count} | {item.Price}"); //TODO: quantity //make item quantity list?
                 }
 
                 userList.AppendLine($"Subtotal: {payment.Subtotal:C}")
