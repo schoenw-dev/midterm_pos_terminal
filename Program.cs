@@ -78,9 +78,9 @@ namespace CashRegApp
                     }
                 }
 
-                var coutitemslist = userOrder.Distinct().ToList();
+                var countitemslist = userOrder.Distinct().ToList();
 
-                foreach (var item in coutitemslist) //trying new solution for formatting
+                foreach (var item in countitemslist) //trying new solution for formatting
                 {
                     userList.AppendLine($"{item.Name} | x{userOrder.Where(x => x.Name == item.Name).ToList().Count} | {item.Price}"); //TODO: quantity //make item quantity list?
                 }

@@ -17,7 +17,7 @@ namespace CashRegApp
             while (line != null)
             {
                 string[] itemProperties = line.Split('|');
-                items.Add(new ItemProperties(itemProperties[0], itemProperties[1], decimal.Parse(itemProperties[2]), itemProperties[3])); //TODO: int.Parse(itemProperties[4])
+                items.Add(new ItemProperties(itemProperties[0], itemProperties[1], decimal.Parse(itemProperties[2]), itemProperties[3])); //TODO: int.Parse(itemProperties[4]) ; index 2 as currency
                 line = reader.ReadLine();
             }
             reader.Close();

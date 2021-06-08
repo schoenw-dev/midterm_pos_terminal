@@ -1,4 +1,6 @@
-Subtotal: $0.00
-Sales Tax: $0.00
-Grandtotal: $0.00
-Payment method: CHECK
+Hot Dog | $1.99
+Hot Dog | $1.99
+Subtotal: $3.98
+Sales Tax: $0.24
+Grandtotal: $4.22
+Payment method: CASH
